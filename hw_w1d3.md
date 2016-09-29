@@ -20,20 +20,24 @@ lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'P
   lines[-1]
   lines.at(4)
 
+
 4. Work out the index position of 'Haymarket' 
   lines.index("Haymarket")
 
 
 5. Add 'Airport' to the start of the array 
   lines.unshift("Airport")
+  lines = ["Airport"] + lines
+  lines.insert(0, "Airport")
 
 
 6. Add 'York Place' to the end of the array
   lines.push("York Place")
   lines << "York Place"
+  lines += ["York Place"]
 
 
-7. Remove 'Edinburgh Park' from the array using it's name
+7. Remove 'Edinburgh Park' from the array using its name
   lines.delete("Edinburgh Park")
 
 
@@ -83,6 +87,7 @@ lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'P
 
 3. How would you return the number `2`?
   my_hash["two"]
+  my_hash.fetch("two")
 
 
 4. How would you add `{3 => "Three"}` to the hash?
@@ -171,16 +176,16 @@ lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'P
 
 
 8. Add the number `7` to Erik's favorite numbers
-  
   users["Erik"][:favourite_numbers].push(7)
 
 
 9. Change Erik's hometown to Edinburgh
   users["Erik"][:home_town] = "Edinburgh"
+  users["Erik"][:home_town].replace("Edinburgh")
 
 
 10. Add a pet dog to Erik called "Fluffy"
-  users["Erik"][:pets][:dog] = "Fluffy"
+  users["Erik"][:pets][:fluffy] = "Dog"
 
 
 11. Add yourself to the users hash
